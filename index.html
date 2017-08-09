@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ganis Maulia Yusuf</title>
+	<script src="jquery.js"></script>
+
+
+</head>
+
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.spinner{
+		width: 100px;
+		height: 100px;
+		background: #eee;
+		border-radius: 50%;
+		position: absolute;
+		top: 35%;
+		left: 43%;
+		margin: 50px;
+		display: inline-block;
+	}
+
+	.spinner:after, 
+	.spinner:before{
+		content:'';
+		display: block;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+	
+
+	.spinner-1:after{
+		position: absolute;
+		top: -4px;
+		left: -4px;
+		border: 4px solid transparent;
+		border-top-color: orangered;
+		border-bottom-color: orangered;
+		animation-name: spinny;
+		animation-duration: 1s;
+		animation-timing-function: linier;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes spinny{
+		0%{transform: rotate(0deg) scale(1);}
+		50%{transform: rotate(45deg) scale(1.2);}
+		100%{transform: rotate(360deg) scale(1);} 
+	}
+
+
+
+	body{
+		background-color: #2db272;
+	}
+
+	.fly{
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.fly li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-delay: 3s;
+		transition-duration: 1s;
+		transform-style: ease;
+		
+	}
+
+	.fly li:last-child{
+		margin-right: 0px;
+	}
+
+	.fly.hidden li{
+		opacity: 0;
+	}
+
+	.fly.hidden li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.fly.hidden li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.fly.hidden li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.fly.hidden li:nth-child(4) {transform: translateX(-10px) translateY(-200px);}
+	.fly.hidden li:nth-child(5) {transform: translateX(-300px) translateY(200px);}
+
+
+/*--------------Hidden----*/
+
+	#ii{
+		display: none;
+	}
+
+	.fli{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 35%;
+		top: 25%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.fli li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 6s;
+		transform-style: ease;
+		}
+
+	.fli li:last-child{
+		margin-right: 0px;
+	}
+
+	.fli.hiddan li{
+		opacity: 0;
+	}
+
+	.fli.hiddan li:nth-child(1) {transform: translateX(-10px) translateY(-10px);}
+	.fli.hiddan li:nth-child(2) {transform: translateX(20px) translateY(20px);}
+	.fli.hiddan li:nth-child(3) {transform: translateX(-15px) translateY(-8px);}
+
+	
+
+	/*----DUA----*/
+
+	.flu{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 65%;
+		top: 25%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.flu li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 7s;
+		transform-style: ease;
+	}
+
+	.flu li:last-child{
+		margin-right: 0px;
+	}
+
+	.flu.hiddun li{
+		opacity: 0;
+	}
+
+	.flu.hiddun li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.flu.hiddun li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.flu.hiddun li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.flu.hiddun li:nth-child(4) {transform: translateX(-150px) translateY(-80px);}
+
+	/*----------TIGA-------------*/
+
+	.fle{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.fle li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 8s;
+		transform-style: ease;
+	}
+
+	.fle li:last-child{
+		margin-right: 0px;
+	}
+
+	.fle.hid li{
+		opacity: 0;
+	}
+
+	.fle.hid li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.fle.hid li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.fle.hid li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.fle.hid li:nth-child(4) {transform: translateX(-150px) translateY(-80px);}
+
+/*-------------EMPAT---------------*/
+
+.flei{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 75%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.flei li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 9s;
+		transform-style: ease;
+	}
+
+	.flei li:last-child{
+		margin-right: 0px;
+	}
+
+	.flei.hidn li{
+		opacity: 0;
+	}
+
+	.flei.hidn li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.flei.hidn li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.flei.hidn li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.flei.hidn li:nth-child(4) {transform: translateX(-150px) translateY(-80px);}
+
+/*-----------seratus--------------*/
+
+.flin{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 25%;
+		top: 25%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.flin li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 12s;
+		transform-style: ease;
+	}
+
+	.flin li:last-child{
+		margin-right: 0px;
+	}
+
+	.flin.hiddaan li{
+		opacity: 0;
+	}
+
+	.flin.hiddaan li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.flin.hiddaan li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.flin.hiddaan li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.flin.hiddaan li:nth-child(4) {transform: translateX(-150px) translateY(-80px);}
+
+	/*-----OOOO------*/
+
+	.flue{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 60%;
+		top: 25%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.flue li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 13s;
+		transform-style: ease;
+	}
+
+	.flue li:last-child{
+		margin-right: 0px;
+	}
+
+	.flue.kamp li{
+		opacity: 0;
+	}
+
+	.flue.kamp li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.flue.kamp li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.flue.kamp li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.flue.kamp li:nth-child(4) {transform: translateX(-100px) translateY(-120px);}
+	.flue.kamp li:nth-child(5) {transform: translateX(-150px) translateY(-80px);}
+
+	/*------PPPPP--------*/
+	.fleu{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.fleu li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 14s;
+		transform-style: ease;
+	}
+
+	.fleu li:last-child{
+		margin-right: 0px;
+	}
+
+	.fleu.ihid li{
+		opacity: 0;
+	}
+
+	.fleu.ihid li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.fleu.ihid li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.fleu.ihid li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.fleu.ihid li:nth-child(4) {transform: translateX(-100px) translateY(-120px);}
+	
+	.fleu1{
+		color: #fff;
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 75%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.fleu1 li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 15s;
+		transform-style: ease;
+	}
+
+	.fleu1 li:last-child{
+		margin-right: 0px;
+	}
+	.fleu1.ihid1 li{
+		opacity: 0;
+	}
+
+	.fleu1.ihid1 li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.fleu1.ihid1 li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.fleu1.ihid1 li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.fleu1.ihid1 li:nth-child(4) {transform: translateX(-100px) translateY(-120px);}
+
+
+	/*-----GANIS----*/
+
+	.fai{
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.fai li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 18s;
+		transform-style: ease;
+		
+	}
+
+	.fai li:last-child{
+		margin-right: 0px;
+	}
+
+	.fai.side li{
+		opacity: 0;
+	}
+
+	.fai.side li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.fai.side li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.fai.side li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.fai.side li:nth-child(4) {transform: translateX(-10px) translateY(-200px);}
+	.fai.side li:nth-child(5) {transform: translateX(-300px) translateY(200px);}
+
+	/*----AKU MAU-----*/
+
+	.free{
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 25%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.free li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 21s;
+		transform-style: ease;
+
+		
+	}
+
+	.free li:last-child{
+		margin-right: 0px;
+	}
+
+	.free.tush li{
+		opacity: 0;
+	}
+
+	.free.tush li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.free.tush li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.free.tush li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.free.tush li:nth-child(4) {transform: translateX(-10px) translateY(-200px);}
+	.free.tush li:nth-child(5) {transform: translateX(-300px) translateY(200px);}
+	.free.tush li:nth-child(6) {transform: translateX(-200px) translateY(90px);}
+	.free.tush li:nth-child(7) {transform: translateX(-100px) translateY(-180px);}
+
+	/*---PUTUSIN----*/
+	.flor{
+		list-style: none;
+		position: absolute;
+		left: 60%;
+		top: 50%;
+		width: 100%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.flor li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 22s;
+		transform-style: ease;
+
+		
+	}
+
+	.flor li:last-child{
+		margin-right: 0px;
+	}
+
+	.flor.tush1 li{
+		opacity: 0;
+	}
+
+	.flor.tush1 li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.flor.tush1 li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.flor.tush1 li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.flor.tush1 li:nth-child(4) {transform: translateX(-10px) translateY(-200px);}
+	.flor.tush1 li:nth-child(5) {transform: translateX(-300px) translateY(200px);}
+	.flor.tush1 li:nth-child(6) {transform: translateX(-200px) translateY(90px);}
+	.flor.tush1 li:nth-child(7) {transform: translateX(-100px) translateY(-180px);}
+	.flor.tush1 li:nth-child(8) {transform: translateX(-110px) translateY(200px);}
+	.flor.tush1 li:nth-child(9) {transform: translateX(-300px) translateY(200px);}
+	.flor.tush1 li:nth-child(10) {transform: translateX(-200px) translateY(90px);}
+	.flor.tush1 li:nth-child(11) {transform: translateX(-100px) translateY(-180px);}
+
+	/*_____uNTUk-----*/
+	/*---PUTUSIN----*/
+	.free1{
+		list-style: none;
+		position: absolute;
+		left: 70%;
+		top: 50%;
+		width: 100%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.free1 li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 26s;
+		transform-style: ease;
+
+		
+	}
+
+	.free1 li:last-child{
+		margin-right: 0px;
+	}
+
+	.free1.tush2 li{
+		opacity: 0;
+	}
+
+	.free1.tush2 li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.free1.tush2 li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.free1.tush2 li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.free1.tush2 li:nth-child(4) {transform: translateX(-10px) translateY(-200px);}
+	.free1.tush2 li:nth-child(5) {transform: translateX(-300px) translateY(200px);}
+	.free1.tush2 li:nth-child(6) {transform: translateX(-200px) translateY(90px);}
+	.free1.tush2 li:nth-child(7) {transform: translateX(-100px) translateY(-180px);}
+	.free1.tush2 li:nth-child(8) {transform: translateX(-110px) translateY(200px);}
+	.free1.tush2 li:nth-child(9) {transform: translateX(-300px) translateY(200px);}
+	.free1.tush2 li:nth-child(10) {transform: translateX(-200px) translateY(90px);}
+
+
+	/*--------Yang----------*/
+	.free2{
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 25%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.free2 li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 29s;
+		transform-style: ease;
+
+		
+	}
+
+	.free2 li:last-child{
+		margin-right: 0px;
+	}
+
+	.free2.tush3 li{
+		opacity: 0;
+	}
+
+	.free2.tush3 li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.free2.tush3 li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.free2.tush3 li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.free2.tush3 li:nth-child(4) {transform: translateX(-10px) translateY(-200px);}
+
+	
+
+	.free3{
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.free3 li{
+		display: inline-block;
+		margin-right: 50px;
+		font-family: Open Sans , Arial;
+		font-weight: 300px;
+		font-size: 4em;
+		color: #fff6bc;
+		opacity: 1;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: 30s;
+		transform-style: ease;
+
+		
+	}
+
+	.free3 li:last-child{
+		margin-right: 0px;
+	}
+
+	.free3.tush4 li{
+		opacity: 0;
+	}
+
+	.free3.tush4 li:nth-child(1) {transform: translateX(-200px) translateY(-200px);}
+	.free3.tush4 li:nth-child(2) {transform: translateX(20px) translateY(100px);}
+	.free3.tush4 li:nth-child(3) {transform: translateX(-150px) translateY(-80px);}
+	.free3.tush4 li:nth-child(4) {transform: translateX(-10px) translateY(-200px);}
+	.free3.tush4 li:nth-child(5) {transform: translateX(-100px) translateY(-180px);}
+	.free3.tush4 li:nth-child(6) {transform: translateX(-110px) translateY(200px);}
+	.free3.tush4 li:nth-child(7) {transform: translateX(-300px) translateY(200px);}
+	.free3.tush4 li:nth-child(8) {transform: translateX(-200px) translateY(90px);}
+	
+
+	
+
+
+	@media screen and (max-width: 1000px){
+
+		.fly {
+			font-size: 40%;
+		}
+
+		.fli {
+			font-size: 40%;
+			position: absolute;
+			top : 25%;
+			left: 35%;
+		}
+
+		.flu {
+			font-size: 40%;
+			position: absolute;
+			top : 25%;
+			left: 65%;
+		}
+
+		.fle {
+			font-size: 40%;
+			
+		}
+
+		.flei {
+			font-size: 40%;
+			
+		}
+
+		.flin {
+			font-size: 40%;
+			position: absolute;
+			left: 50%;
+			top: 25%;
+			} 
+
+		.flue {
+			font-size: 40%;
+			position: absolute;
+			left: 50%;
+			top: 50%
+			}
+
+		.fleu {
+			font-size: 40%;
+			position: absolute;
+			left: 35%;
+			top: 75%
+		}
+
+		.fleu1{
+			font-size: 40%;
+			position: absolute;
+			left: 65%;
+			top: 75%;
+		}
+
+		.fai{
+			font-size: 40%;
+		}
+
+		.free{
+			font-size: 40%;
+			position: absolute;
+			left: 50%;
+			top: 35%;
+		}
+
+		.flor{
+			font-size: 40%;
+			font-size: 40%;
+			position: absolute;
+			left: 50%;
+			top: 70%;
+		}
+
+		.free1{
+			position: absolute;
+			top: 50%;
+			font-size: 40%;
+			left: 40%;
+		}
+
+		.fly li {margin-right: 20px;}
+		.fli li {margin-right: 20px;}
+		.flu li {margin-right: 20px;}
+		.fle li {margin-right: 20px;}
+		.flei li {margin-right: 20px;}
+		.flin li {margin-right: 20px;}
+		.flue li {margin-right: 20px;}
+		.fleu li {margin-right: 20px;}
+		.fleu1 li {margin-right: 20px;}
+		.fai li {margin-right: 20px;}
+		.free li {margin-right: 20px;}
+		.flor li {margin-right: 20px;}
+		.free1 li {margin-right: 20px;}
+
+	}
+
+	@media screen and (max-width: 760px){
+		.fly {
+			font-size: 20%;
+		}
+
+		.soka{
+			width: 100%;
+		}
+
+		.fli {
+			font-size: 20%;
+			position: absolute;
+			top : 20%;
+			left: 20%;
+		}
+
+		.fli li:last-child{
+			margin-right: 0px;
+		}
+
+		.flu {
+			font-size: 20%;
+			position: absolute;
+			margin-right: 0px;
+			top : 40%;
+			left: 70%;
+		}
+
+		.flu li:last-child{
+			margin-right: 0px;
+		}
+
+
+		.fle {
+			font-size: 20%;
+			position: absolute;
+			margin-right: 0px;
+			top : 60%;
+			left: 20%;
+			
+		}
+
+		.flei {
+			font-size: 20%;
+			position: absolute;
+			margin-right: 0px;
+			top : 80%;
+			left: 70%;
+			
+		}
+
+		.flin {
+			font-size: 20%;
+			position: absolute;
+			left: 50%;
+			top: 25%;
+			} 
+
+		.flue {
+			font-size: 20%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			}
+
+		.fleu {
+			font-size: 20%;
+			position: absolute;
+			left: 25%;
+			top: 75%;
+		}
+
+		.fleu1{
+			font-size: 20%;
+			position: absolute;
+			left: 65%;
+			top: 75%;
+		}
+
+		.fai{
+			font-size: 20%;
+		}
+
+		.free{
+			position: absolute;
+			top: 35%;
+			font-size: 20%;
+			left: 75%;
+			width: 100%;
+		}
+
+		.flor{
+			position: absolute;
+			top: 70%;
+			font-size: 20%;
+			left: 70%;
+			right: 0%;
+			width: 100%;
+		}
+
+		.free1{
+			position: absolute;
+			top: 50%;
+			font-size: 20%;
+			left: 70%;
+			right: 0%;
+			width: 100%;
+		}
+
+		.free2{
+			position: absolute;
+			top: 25%;
+			font-size: 20%;
+			left: 60%;
+			right: 0%;
+			
+		}
+
+		.free3{
+			position: absolute;
+			top: 50%;
+			font-size: 30%;
+			left: 70%;
+			right: 0%;
+			width: 100%;
+		}
+
+		.spinner{
+			position: absolute;
+			top: 30%;
+			left: 25%;
+
+		}
+
+
+
+
+
+		.fly li {margin-right: 20px;}
+		.fli li {margin-right: 20px;}
+		.flu li {margin-right: 20px;}
+		.fle li {margin-right: 20px;}
+		.flei li {margin-right: 20px;}
+		.flin li {margin-right: 20px;}
+		.flue li {margin-right: 20px;}
+		.fleu li {margin-right: 20px;}
+		.fleu1 li {margin-right: 20px;} 
+		.fai li {margin-right: 20px;} 
+		.free li {margin-right: 20px;}
+		.flor li {margin-right: 10px;}  
+		.free1 li {margin-right: 20px;}
+		.free2 li {margin-right: 20px;}
+		.free3 li {margin-right: 20px;}
+	}
+
+	
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<body>
+
+	<div class="spinner spinner-1"></div>
+
+
+	<ul class="fly hidden">
+		<li>G</li>
+		<li>A</li>
+		<li>N</li>
+		<li>I</li>
+		<li>S</li>
+	</ul>
+
+
+	<!--Asal-->
+<div class="soka">
+
+	<ul class="fli hiddan">
+		<li>A</li>
+		<li>K</li>
+		<li>U</li>
+	</ul>
+
+	<ul class="flu hiddun">
+		<li>S</li>
+		<li>U</li>
+		<li>K</li>
+		<li>A</li>
+	</ul>
+
+	<ul class="fle hid">
+		<li>S</li>
+		<li>A</li>
+		<li>M</li>
+		<li>A</li>
+	</ul>
+
+	<ul class="flei hidn">
+		<li>K</li>
+		<li>A</li>
+		<li>M</li>
+		<li>U</li>
+	</ul>
+	
+
+</div>
+
+<div class="laka">
+
+	<ul class="flin hiddaan">
+		<li>A</li>
+		<li>K</li>
+		<li>U</li>
+	</ul>
+
+	<ul class="flue kamp">
+		<li>S</li>
+		<li>A</li>
+		<li>Y</li>
+		<li>A</li>
+		<li>N</li>
+		<li>G</li>
+	</ul>
+
+	<ul class="fleu ihid">
+		<li>S</li>
+		<li>A</li>
+		<li>M</li>
+		<li>A</li>
+	</ul>
+
+	<ul class="fleu1 ihid1">
+		<li>K</li>
+		<li>A</li>
+		<li>M</li>
+		<li>U</li>
+	</ul>
+
+	
+	
+
+</div>
+
+<div class="mama">
+	<ul class="fai side">
+		<li>G</li>
+		<li>A</li>
+		<li>N</li>
+		<li>I</li>
+		<li>S</li>
+	</ul>
+</div>
+
+<div class="ganis">
+
+	<ul class="free tush">
+		<li>A</li>
+		<li>K</li>
+		<li>U</li>
+		<li> </li>
+		<li>M</li>
+		<li>A</li>
+		<li>U</li>
+	</ul>
+
+	<ul class="flor tush1">
+		<li>P</li>
+		<li>U</li>
+		<li>T</li>
+		<li>U</li>
+		<li>S</li>
+		<li>I</li>
+		<li>N</li>
+		<li> </li>
+		<li>K</li>
+		<li>A</li>
+		<li>M</li>
+		<li>U</li>
+	</ul>
+	
+</div>
+
+<div class="ganis1">
+
+	<ul class="free1 tush2">
+		<li>U</li>
+		<li>N</li>
+		<li>T</li>
+		<li>U </li>
+		<li>K</li>
+		<li> </li>
+		<li>J</li>
+		<li>A</li>
+		<li>D</li>
+		<li>I</li>
+	</ul>
+	
+</div>
+
+<div class="ganis2">
+
+	<ul class="free2 tush3">
+		<li>Y</li>
+		<li>A</li>
+		<li>N</li>
+		<li>G</li>
+	</ul>
+
+	<ul class="free3 tush4">
+		<li>T</li>
+		<li>E</li>
+		<li>R</li>
+		<li>A</li>
+		<li>K</li>
+		<li>H</li>
+		<li>I</li>
+		<li>R</li>
+	</ul>
+
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+	$('.spinner').delay(1500).fadeOut(500);
+
+
+
+
+	$(function(){
+		setTimeout(function(){
+			$('.fly').removeClass('hidden').delay(6000).fadeOut(500);
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.fli').removeClass('hiddan');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.flu').removeClass('hiddun');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.fle').removeClass('hid');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.flei').removeClass('hidn');
+		});
+	});
+
+	$('.soka').delay(11000).fadeOut(1000);
+
+	$('.laka').delay(14000).fadeIn(1000).delay(4000).fadeOut(1000);
+	$(function(){
+		setTimeout(function(){
+			$('.flin').removeClass('hiddaan');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.flue').removeClass('kamp');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.fleu').removeClass('ihid');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.fleu1').removeClass('ihid1');
+		});
+	});
+
+	$('.mama').delay(18000).fadeIn(1000).delay(3000).fadeOut(1000);
+	$(function(){
+		setTimeout(function(){
+			$('.fai').removeClass('side');
+		});
+	});
+
+
+
+	$('.ganis').delay(22000).fadeIn(1000).delay(3000).fadeOut(1000);
+	$(function(){
+		setTimeout(function(){
+			$('.free').removeClass('tush');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.flor').removeClass('tush1');
+		});
+	});
+
+	$('.ganis1').delay(26000).fadeIn(1000).delay(3000).fadeOut(1000);
+	$(function(){
+		setTimeout(function(){
+			$('.free1').removeClass('tush2');
+		});
+	});
+
+	$('.ganis2').delay(29000).fadeIn(1000).delay(5000).fadeOut(1000);
+	$(function(){
+		setTimeout(function(){
+			$('.free2').removeClass('tush3');
+		});
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$('.free3').removeClass('tush4');
+		});
+	});
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
